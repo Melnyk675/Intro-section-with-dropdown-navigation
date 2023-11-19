@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto+Serif:opsz@8..144&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="./styles.css" />
+  <script defer src="./script.js"></script>
+
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <a href="/" class="header__link">
+        <img
+          src="./images/logo.svg"
+          alt="Snap - Home"
+          width="84"
+          height="27"
+          class="header__logo"
+        />
+      </a>
+      <nav class="nav js-nav">
+        <button
+          aria-expanded="false"
+          aria-label="Menu"
+          aria-controls="menu-list"
+          class="nav__toggle js-toggle"
+        >
+          <img
+            src="./images/icon-menu.svg"
+            alt=""
+            width="32"
+            height="18"
+            class="nav__toggle-icon"
+          />
+          <img
+            src="./images/icon-close-menu.svg"
+            alt=""
+            width="26"
+            height="26"
+            class="nav__toggle-icon nav__toggle-icon--close"
+          />
+        </button>
+        <ul role="list" id="menu-list" class="nav__list">
+          <li role="listitem" class="nav__item nav__item--features">
+            <button
+              aria-expanded="false"
+              aria-controls="features-submenu"
+              class="nav__subtoggle js-subtoggle"
+            >
+              Features
+              <svg
+                width="10"
+                height="6"
+                aria-hidden="true"
+                focusable="false"
+                xmlns="http://www.w3.org/2000/svg"
+                class="nav__subtoggle-icon"
+              >
+                <path
+                  stroke="#686868"
+                  stroke-width="1.5"
+                  fill="none"
+                  d="m1 1 4 4 4-4"
+                />
+              </svg>
+            </button>
+            <ul
+              role="list"
+              id="features-submenu"
+              class="nav__sublist nav__sublist--features"
+              hidden
+            >
+              <li role="listitem" class="nav__subitem">
+                <a href="/" class="nav__link">
+                  <img
+                    src="./images/icon-todo.svg"
+                    alt=""
+                    width="14"
+                    height="16"
+                    class="nav__icon"
+                  />
+                  <span class="nav__link-text">Todo List</span>
+                </a>
+              </li>
+              <li role="listitem" class="nav__subitem">
+                <a href="/" class="nav__link">
+                  <img
+                    src="./images/icon-calendar.svg"
+                    alt=""
+                    width="16"
+                    height="16"
+                    class="nav__icon"
+                  />
+                  <span class="nav__link-text">Calendar</span>
+                </a>
+              </li>
+              <li role="listitem" class="nav__subitem">
+                <a href="/" class="nav__link">
+                  <img
+                    src="./images/icon-reminders.svg"
+                    alt=""
+                    width="13"
+                    height="17"
+                    class="nav__icon"
+                  />
+                  <span class="nav__link-text">Reminders</span>
+                </a>
+              </li>
+              <li role="listitem" class="nav__subitem">
+                <a href="/" class="nav__link">
+                  <img
+                    src="./images/icon-planning.svg"
+                    alt=""
+                    width="16"
+                    height="16"
+                    class="nav__icon"
+                  />
+                  <span class="nav__link-text">Planning</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li role="listitem" class="nav__item">
+            <button
+              aria-expanded="false"
+              aria-controls="company-submenu"
+              class="nav__subtoggle js-subtoggle"
+            >
+              Company
+              <svg
+                width="10"
+                height="6"
+                aria-hidden="true"
+                focusable="false"
+                xmlns="http://www.w3.org/2000/svg"
+                class="nav__subtoggle-icon"
+              >
+                <path
+                  stroke="#686868"
+                  stroke-width="1.5"
+                  fill="none"
+                  d="m1 1 4 4 4-4"
+                />
+              </svg>
+            </button>
+            <ul
+              role="list"
+              id="company-submenu"
+              class="nav__sublist nav__sublist--company"
+              hidden
+            >
+              <li role="listitem" class="nav__subitem">
+                <a href="/" class="nav__link">History</a>
+              </li>
+              <li role="listitem" class="nav__subitem">
+                <a href="/" class="nav__link">Our Team</a>
+              </li>
+              <li role="listitem" class="nav__subitem">
+                <a href="/" class="nav__link">Blog</a>
+              </li>
+            </ul>
+          </li>
+          <li role="listitem" class="nav__item">
+            <a href="/" class="nav__link">Careers</a>
+          </li>
+          <li role="listitem" class="nav__item">
+            <a href="/" class="nav__link">About</a>
+          </li>
+          <li role="listitem" class="nav__item nav__item--login">
+            <a href="/" class="nav__link nav__link--login">Login</a>
+          </li>
+          <li role="listitem" class="nav__item">
+            <a href="/" class="nav__link nav__link--register">Register</a>
+          </li>
+        </ul>
+        <div class="nav__backdrop"></div>
+      </nav>
+    </div>
+  </header>
+  <main class="hero">
+    <div class="hero__inner">
+      <picture class="hero__image-container">
+        <source
+          srcset="./images/image-hero-desktop.png"
+          media="(min-width: 60rem)"
+        />
+        <img
+          src="./images/image-hero-mobile.png"
+          alt=""
+          width="750"
+          height="564"
+          class="hero__image"
+        />
+      </picture>
+      <div class="hero__intro">
+        <h1 class="hero__title">Make remote work</h1>
+        <p class="hero__text">
+          Get your team in sync, no matter your location. Streamline
+          processes, create team rituals, and watch productivity soar.
+        </p>
+        <a href="/" class="hero__cta">Learn more</a>
+        <h2 class="sr-only">Our clients</h2>
+        <ul role="list" class="hero__client-list">
+          <li
+            role="listitem"
+            class="hero__client-listitem hero__client-listitem--databiz"
+          >
+            <img
+              src="./images/client-databiz.svg"
+              alt="Databiz"
+              width="114"
+              height="20"
+              class="hero__client-logo"
+            />
+          </li>
+          <li
+            role="listitem"
+            class="hero__client-listitem hero__client-listitem--audiophile"
+          >
+            <img
+              src="./images/client-audiophile.svg"
+              alt="Audiophile"
+              width="73"
+              height="36"
+              class="hero__client-logo"
+            />
+          </li>
+          <li
+            role="listitem"
+            class="hero__client-listitem hero__client-listitem--meet"
+          >
+            <img
+              src="./images/client-meet.svg"
+              alt="Meet"
+              width="90"
+              height="20"
+              class="hero__client-logo"
+            />
+          </li>
+          <li
+            role="listitem"
+            class="hero__client-listitem hero__client-listitem--maker"
+          >
+            <img
+              src="./images/client-maker.svg"
+              alt="Maker"
+              width="83"
+              height="24"
+              class="hero__client-logo"
+            />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main> 
+</body>
+</html>
